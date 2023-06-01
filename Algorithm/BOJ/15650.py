@@ -1,6 +1,6 @@
 n, m = list(map(int, input().split()))
 a = []
-# 4 2
+
 def dfs(start):
     if len(a) == m:
         print(' '.join(map(str, a)))
