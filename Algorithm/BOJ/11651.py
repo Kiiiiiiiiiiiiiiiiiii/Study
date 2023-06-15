@@ -1,20 +1,18 @@
-n = int(input())
-a = list(map(int, input().split()))
-m = int(input())
-b = list(map(int, input().split()))
+# 0 4
+# 1 2
+# 1 -1
+# 2 2
+# 3 3
+# y x 를 반대로 넣어 정렬하고 다시 체크
+import sys
+n = int(sys.stdin.readline())
+lst = []
 
-arry={}
+for _ in range(n):
+    x, y = list(map(int, sys.stdin.readline().split()))
+    lst.append([y, x])
 
-#a를 k v로 arry에 저장
-for i in a:
-    if i in arry:
-        arry[i] += 1
-    else:
-        arry[i] = 1
+lst.sort()
 
-# arry에 b의 값이 있으면 출력
-for i in b:
-    if i in arry:
-        print(arry[i], end=' ')
-    else:
-        print(0, end=' ')
+for y, x in lst:
+    print(x, y)
