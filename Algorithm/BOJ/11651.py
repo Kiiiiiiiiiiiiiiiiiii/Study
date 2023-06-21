@@ -1,18 +1,11 @@
-# 0 4
-# 1 2
-# 1 -1
-# 2 2
-# 3 3
-# y x 를 반대로 넣어 정렬하고 다시 체크
-import sys
-n = int(sys.stdin.readline())
-lst = []
+n = int(input())
+list =[]
 
 for _ in range(n):
-    x, y = list(map(int, sys.stdin.readline().split()))
-    lst.append([y, x])
+    x, y = list(map(int, input().split()))
+    list.append([y, x])
 
-lst.sort()
+list.sort()
 
-for y, x in lst:
+for y, x in list:
     print(x, y)
