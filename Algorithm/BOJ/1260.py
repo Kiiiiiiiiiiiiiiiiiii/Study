@@ -7,7 +7,7 @@ matrix=[[0] * (N + 1) for i in range(N + 1)]
 # 방문한 곳 체크를 위한 배열 선언
 visited = [0] * (N + 1)
 
-# 입력 받는 두 값에 대해 영행렬에 1 삽입
+# 입력 받는 두 값(a,b)관계에 a->b, b->a 영행렬에 1 삽입
 for i in range(M):
     a, b = map(int, input().split())
     matrix[a][b] = matrix[b][a] = 1
